@@ -1,0 +1,17 @@
+name: Action javascript
+
+author: Kenjimaeda54
+description: Simple action javascript
+
+inputs:
+  who-to-greet:
+    description: who-to-greet
+    default: kenji
+    required: true
+
+outputs:
+  time:
+    description: "The greeting time"
+runs:
+  using: "node16"
+  main: "index.js"
