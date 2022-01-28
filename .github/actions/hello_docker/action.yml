@@ -1,0 +1,22 @@
+name: Actions with docker
+
+author: kenjimaeda54
+description: Actions hello with docker
+
+inputs:
+  who-to-greet:
+    description: Simple hello with docker
+    required: true
+    default: Ali
+
+outputs:
+  time:
+    description: "The time greeting"
+
+runs:
+  using: docker
+  image: "Dockerfile"
+  # args seria a saida docker e entrypoint entrada
+  # docker precisa de um args e entrypoint
+  args:
+    - ${{ inputs.who-to-greet }}
