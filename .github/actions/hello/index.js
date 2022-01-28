@@ -4,6 +4,7 @@ const core = require("@actions/core");
 const github = require("@actions/github");
 
 try {
+  throw new Error("Something went wrong");
   //tem que ser mesmo input que eta no actions
   const name = core.getInput("who-to-greet");
   // no actions o who-to-greet é um input
