@@ -18,9 +18,9 @@ try {
   console.log(`Hello ${name}!`);
   const time = new Date().toTimeString();
   core.setOutput("time", time);
-  core.group("Click here for looking object");
+  core.startGroup("Click here for looking object");
   console.log(JSON.stringify(github, null, "\t"));
-  core.groupEnd();
+  core.endGroup();
   //essa varinel vai ser exportada
   //primeiro parâmetro é o nome da variavel
   //segundo parâmetro é o valor
