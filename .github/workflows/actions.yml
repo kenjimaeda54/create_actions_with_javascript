@@ -10,7 +10,8 @@ jobs:
       # entao para pegar o retorno do action estou usando id
       - uses: actions/checkout@v2
       # estou usando meu action, precisa respeitar contrato
-      - uses: ./.github/actions/hello
+      - name: Use actions
+        uses: ./.github/actions/hello
         id: hello
         with:
           who-to-greet: "World"
