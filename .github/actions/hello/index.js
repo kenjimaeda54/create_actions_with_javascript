@@ -18,14 +18,13 @@ try {
   console.log(`Hello ${name}!`);
   const time = new Date().toTimeString();
   core.setOutput("time", time);
-  core.
-  core.group("Click here for looking object");
+  core.core.group("Click here for looking object");
   console.log(JSON.stringify(github, null, "\t"));
   core.groupEnd();
   //essa varinel vai ser exportada
   //primeiro parâmetro é o nome da variavel
   //segundo parâmetro é o valor
-  core.exportVariable("HELLO", 'hello');) 
+  core.exportVariable("HELLO", "hello");
 } catch (e) {
   core.setFailed(e.message);
 }

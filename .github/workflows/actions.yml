@@ -10,8 +10,12 @@ jobs:
       # entao para pegar o retorno do action estou usando id
       - uses: actions/checkout@v2
       # estou usando meu action, precisa respeitar contrato
-      #https://github.com/vercel/ncc#readme
-      #versel vai buildar o codigo javascript
+      - name: Build o dist
+        #https://github.com/vercel/ncc#readme
+        #versel vai buildar o codigo javascript
+        run: |
+          npm i -g @vercel/ncc
+          ncc build .github/actions/hello/index.js -o .github/actions/hello/dist
       - name: Use actions
         uses: ./.github/actions/hello
         id: hello
