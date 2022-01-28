@@ -8478,7 +8478,7 @@ const github = __nccwpck_require__(8033);
     const assignees = core.getInput("assignees");
     const title = core.getInput("title");
     //https://octokit.github.io/rest.js/v18
-    const octokit = new github.getOctokit(token);
+    const octokit = github.getOctokit(token);
     const { data } = await octokit.issues.create({
       // owner: github.context.repo.owner,
       // repo: github.context.repo.repo,
