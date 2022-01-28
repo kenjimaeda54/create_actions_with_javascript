@@ -8474,6 +8474,7 @@ const core = __nccwpck_require__(6964);
 const github = __nccwpck_require__(8033);
 
 try {
+  throw new Error("Something went wrong");
   //tem que ser mesmo input que eta no actions
   const name = core.getInput("who-to-greet");
   // no actions o who-to-greet é um input
