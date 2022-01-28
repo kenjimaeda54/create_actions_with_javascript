@@ -20,8 +20,9 @@ jobs:
           assignees: |
             kenjimaeda54
             kenji17
+
       - run: |
-          echo "Issue ${{ steps.issue.outputs.issue }}"
+          echo 'Issue ${{ steps.issue.outputs.issue }}'
       # estou usando meu action, precisa respeitar contrato
       - name: Use actions
         uses: ./.github/actions/hello

@@ -9,7 +9,7 @@ const github = require("@actions/github");
     const title = core.getInput("title");
     //https://octokit.github.io/rest.js/v18
     const octokit = github.getOctokit(token);
-    const { data } = await octokit.issues.create({
+    const { data } = await octokit.rest.issues.create({
       // owner: github.context.repo.owner,
       // repo: github.context.repo.repo,
       ...github.context.repo,
