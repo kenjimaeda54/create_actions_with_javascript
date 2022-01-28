@@ -18,7 +18,7 @@ inputs:
     required: true
 
 outputs:
-  issue: # id do issue
+  issue: # id do issue open
     description: "The issue is object as json string"
 
 runs:
