@@ -8487,7 +8487,7 @@ const github = __nccwpck_require__(8033);
       body,
       //assignees e um array,yml não aceita array
       // entao o contrato vai ser usar | e aqui trato com split
-      assignees: assignees ? assignees.split("\n") : [],
+      assignees: assignees ? assignees.split("\n") : undefined,
     });
     //data nao vai ser um objeto por isso stringify
     //primeiro parâmetro precisa ser idêntico declarado na saida do action
