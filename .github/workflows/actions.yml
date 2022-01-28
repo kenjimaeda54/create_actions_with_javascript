@@ -14,6 +14,6 @@ jobs:
         uses: ./.github/actions/hello
         id: hello
         with:
-          who-to-greet: "World"
+          who-to-gret: "World"
         # se olhar a saida em actions e time
-      - run: echo 'Time ${{ steps.hello.ouputs.time }}'
+      - run: echo 'Time ${{ steps.hello.outputs.time }}'
