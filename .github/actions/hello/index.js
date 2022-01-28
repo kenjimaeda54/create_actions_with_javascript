@@ -18,7 +18,7 @@ try {
   console.log(`Hello ${name}!`);
   const time = new Date().toTimeString();
   core.setOutput("time", time);
-  core.core.group("Click here for looking object");
+  core.group("Click here for looking object");
   console.log(JSON.stringify(github, null, "\t"));
   core.groupEnd();
   //essa varinel vai ser exportada
