@@ -18,7 +18,7 @@ jobs:
           body: I opened issue why i cant access ao repo do github
           # aqui e assim porque o contrato e um array e estamos tratando por \ no index
           assignees: |
-            'kenji173'
+            kenjimaeda54
       - run: |
           echo "Issue ${{ steps.issue.outputs.issue }}"
       # estou usando meu action, precisa respeitar contrato
