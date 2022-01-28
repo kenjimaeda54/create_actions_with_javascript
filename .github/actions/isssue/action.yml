@@ -1,0 +1,26 @@
+name: Action issue
+
+author: kenjimaeda54
+description: "Opens a github issue"
+
+inputs:
+  token:
+    description: "Github token"
+    required: true
+  title:
+    description: "Title issue"
+    required: true
+  body:
+    description: "Body issue"
+    required: true
+  assignees:
+    description: "Who is open issue"
+    required: true
+
+outputs:
+  issue: # id do issue
+    description: "The issue is object as json string"
+
+runs:
+  using: "node16"
+  main: "dis/index.js"

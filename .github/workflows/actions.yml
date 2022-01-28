@@ -1,7 +1,7 @@
 name: Hello time
-
+# observação dentro do workflows e actions,fora e action
 on: push
-#
+
 jobs:
   testing-actions:
     runs-on: ubuntu-latest
@@ -9,6 +9,17 @@ jobs:
       # eu nao posso colocar o run aqui em baixo
       # entao para pegar o retorno do action estou usando id
       - uses: actions/checkout@v2
+      - name: Open issue
+        uses: ./.github/actions/issue
+        id: issue
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          title: Problem with url do github
+          body: I opened issue why i cant access ao repo do github
+          # aqui e assim porque o contrato e um array e estamos tratando por \ no index
+          assignees: |
+            'kenji173'
+      - run: echo "Issue ${{ steps.issue.outputs.issue }}"
       # estou usando meu action, precisa respeitar contrato
       - name: Use actions
         uses: ./.github/actions/hello
