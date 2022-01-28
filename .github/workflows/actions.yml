@@ -10,6 +10,10 @@ jobs:
       # entao para pegar o retorno do action estou usando id
       - uses: actions/checkout@v2
       # estou usando meu action, precisa respeitar contrato
+      - name: Build o dist
+        #https://github.com/vercel/ncc#readme
+        #versel vai buildar o codigo javascript
+        run: ncc build .github/actions/hello/index.js -o .github/actions/hello/dist
       - name: Use actions
         uses: ./.github/actions/hello
         id: hello
@@ -17,3 +21,4 @@ jobs:
           who-to-greet: "World"
         # se olhar a saida em actions e time
       - run: echo 'Time ${{ steps.hello.outputs.time }}'
+      - run: echo "Olha a variavel importada do index.js => $HELLO"
