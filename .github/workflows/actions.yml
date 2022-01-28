@@ -19,7 +19,6 @@ jobs:
           # aqui e assim porque o contrato e um array e estamos tratando por \ no index
           assignees: |
             kenjimaeda54
-            kenji17
 
       - run: |
           echo 'Issue ${{ steps.issue.outputs.issue }}'
