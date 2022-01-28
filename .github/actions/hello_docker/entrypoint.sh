@@ -2,7 +2,8 @@
 #https://docs.github.com/en/actions/using-workflows/workflow-commands-for-github-actions
 
 
-
+# nao esquece de dar permissao ao entrypoint.sh
+# .github/actions/hello_docker/entrypoint.sh
 echo "::debug::Debug message"
 echo "::error::Error message"
 echo "::warning::Warning message"
