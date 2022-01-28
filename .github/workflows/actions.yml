@@ -13,7 +13,9 @@ jobs:
       - name: Build o dist
         #https://github.com/vercel/ncc#readme
         #versel vai buildar o codigo javascript
-        run: ncc build .github/actions/hello/index.js -o .github/actions/hello/dist
+        run: |
+          npm i -g @vercel/ncc
+          ncc build .github/actions/hello/index.js -o .github/actions/hello/dist
       - name: Use actions
         uses: ./.github/actions/hello
         id: hello
