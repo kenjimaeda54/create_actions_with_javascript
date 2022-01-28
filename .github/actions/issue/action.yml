@@ -23,4 +23,4 @@ outputs:
 
 runs:
   using: "node16"
-  main: "dis/index.js"
+  main: "dist/index.js"
