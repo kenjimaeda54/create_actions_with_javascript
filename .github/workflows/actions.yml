@@ -33,7 +33,7 @@ jobs:
       - run: echo 'Time ${{ steps.hello.outputs.time }}'
       - run: echo "Olha a variavel importada do index.js => $HELLO"
       - name: Use actions docker
-        uses: ./.github/actions/hello-docker
+        uses: ./.github/actions/hello_docker
         id: docker
         with:
           who-to-greet: "Docker"
