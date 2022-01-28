@@ -22,9 +22,9 @@ try {
   core.group("Click here for looking object");
   console.log(JSON.stringify(github, null, "\t"));
   core.groupEnd();
-  //essa varivel vai ser exportada
-  //primerio parammetro é o nome da variavel
-  //segundo parametro é o valor
+  //essa varinel vai ser exportada
+  //primeiro parâmetro é o nome da variavel
+  //segundo parâmetro é o valor
   core.exportVariable("HELLO", 'hello');) 
 } catch (e) {
   core.setFailed(e.message);
