@@ -1,3 +1,4 @@
+#!/bin/sh 
 
 #https://docs.github.com/en/actions/using-workflows/workflow-commands-for-github-actions
 
