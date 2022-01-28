@@ -37,5 +37,6 @@ jobs:
         id: docker
         with:
           who-to-greet: "Docker"
-      - run: echo "Time => ${{ steps.docker.outputs.time }}"
-      - run: echo ${{ env.action.state }}
+      - run: |
+          echo "Time => ${{ steps.docker.outputs.time }}"
+          echo "Variavel exportada => ${{ env.action.state }}"
