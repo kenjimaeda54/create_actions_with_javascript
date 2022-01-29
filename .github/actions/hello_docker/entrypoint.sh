@@ -26,4 +26,4 @@ echo "::set-output name=time::$time"
 #https://docs.github.com/en/actions/using-workflows/workflow-commands-for-github-actions#setting-an-environment-variable
 # saida das variaveis, para o arquivo javascrpit
 # usou a lib core, dai utilizou core.exportVariable
-echo  "action_state=eu estou sendo exportado">> $GITHUB_ENV
+echo  "action_state=esta variavel vai estar disponível env.action_state" >> $GITHUB_ENV
