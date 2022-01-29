@@ -1,17 +1,21 @@
 # Create custom actions
 Criando custom actions com docker e javascript
 
-## Motivacao
+## Motivação
 Aprofundar nas feature do gihub actions
 
 ## Feature
-- Para criar os actions em javascript usei o [toolkit]( https://github.com/actions/toolkit)
-- Esta e a documentacao do [octokit](https://octokit.github.io/rest.js/v18)
-- Com essas libs fica facil criar os actions,foi criado um action para quando e gerado um issue no repositorio
-- Um arquivo action para criar seus custom action trabalha com conceito de entrada e saida
-- As entradas do action podem vim de um script sh,javascript,php qualquer linguagem
+- Para criar meus actions em javascript usei o [toolkit]( https://github.com/actions/toolkit)
+- Esta e a documentação do [octokit](https://octokit.github.io/rest.js/v18)
+- Com essas libs fica fácil criar os actions
+- Foi criado um action para lidar com issues criados repositório
+- Um arquivo action trabalha com conceito de entrada e saída
+- As entradas do action podem, vim de um script sh, javascript, php qualquer linguagem
 - No exemplo com javascript pego as entradas do arquivo com o  [toolkit]( https://github.com/actions/toolkit)
-- E no yml que vai usar no nosso action ele e obrigado a implementar o token,title,body e assignes para nao gerar erro no seu job
+- E no yml que vai usar no nosso action ele e obrigado a implementar o token, title, body e assignes para não gerar erro no seu job
+- O arquivo que esta usando nosso action implementa oque e obrigatório usando a palavra reservada with
+- A saída do custom actions nesse caso e objeto do issue
+- E quem esta usando nosso action consegue capturar fazendo referência com id no steep
 
 ``` yml
 name: Action issue
@@ -51,7 +55,7 @@ runs:
  const assignees = core.getInput("assignees");
  const title = core.getInput("title");
     //https://octokit.github.io/rest.js/v18
-
+ core.setOutput("issue", JSON.stringify(data));
 ##
 ```
 ``` yml
